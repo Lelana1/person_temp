@@ -19,11 +19,13 @@ class Person:
         intro = "Hello my name is " + self.name 
         years = " and I am " + str(self.age) + " years old."
         likes = " My interests are "
-        end = "and " + self.interests[size - 1] + "."
+        end = " and " + self.interests[size - 1] + "."
         for item in range(0, size):
             if item == size - 1:
                 break
-            likes += self.interests[item] + ", "
+            likes += self.interests[item]
+            if item < size - 2:
+                likes += ', '
         result = intro + years + likes + end
         return result
 
